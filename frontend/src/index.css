@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ሙሉ ድረ-ገጹን Outfit ፎንት እንዲጠቀም ማድረግ */
+* {
+    font-family: "Outfit", sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #1f2937;
+}
+
+/* Navbar ስቲኪ እንዲሆንና ትንሽ ሻዶ እንዲኖረው */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    width: 100%;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+/* NavLink ሲመረጥ ከስሩ ያለው መስመር እንዲታይ */
+a.active hr {
+    display: block;
+    width: 100%;
+    background-color: black;
+}
+
+/* Prata ፎንት ለትልልቅ ርዕሶች (Titles) */
+.prata-regular {
+    font-family: "Prata", serif;
+    font-weight: 400;
+}
+
+/* ስክሮል ባር እንዳይታይ (Clean Look) */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* 💡 ሞባይል ላይ ሜኑው ሲነካ የሚኖረው ከለር (Update) */
+@media (max-width: 768px) {
+    a.active {
+        background-color: #f9fafb; /* ቀላል ግራጫ */
+        color: #000000;
+        font-weight: 600;
+    }
+}
+
+/* Input Fields Style */
+.input {
+    @apply border border-gray-300 rounded py-2 px-4 w-full focus:outline-none focus:ring-1 focus:ring-black transition-all;
+}
+
+/* አኒሜሽን ለሆቨር (Smoothing) */
+.transition-all {
+    transition: all 0.3s ease-in-out;
+}
