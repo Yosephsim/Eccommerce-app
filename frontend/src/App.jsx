@@ -11,7 +11,7 @@ import Orders from "./pages/Orders.jsx";
 import Collection from "./pages/Collection.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
-import SearchBar from "./components/searchBar.jsx";
+import SearchBar from "./components/SearchBar.jsx";
 import Success from "./pages/Success.jsx";
 import VerifyOrder from './pages/VerifyOrder';
 import { ToastContainer } from "react-toastify";
